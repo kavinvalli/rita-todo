@@ -9,6 +9,15 @@ export interface IUser {
   updated_at: string
 }
 
+export interface ITodo {
+  id: number
+  title: string
+  details?: string
+  done: boolean
+  created_at?: string
+  updated_at?: string
+}
+
 export interface IPageProps extends Page<PageProps> {
   props: {
     errors: Errors & ErrorBag

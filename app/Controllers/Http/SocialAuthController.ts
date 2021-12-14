@@ -17,7 +17,7 @@ export default class SocialAuthController {
     )
 
     await auth.use('web').login(user)
-    return response.redirect('/')
+    return response.redirect('/todos')
   }
 
   public googleRedirect = ({ ally }: HttpContextContract) => ally.use('google').redirect()
@@ -35,6 +35,6 @@ export default class SocialAuthController {
     )
 
     await auth.use('web').login(user)
-    return response.redirect('/')
+    return response.redirect('/todos')
   }
 }

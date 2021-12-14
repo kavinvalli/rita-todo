@@ -32,7 +32,8 @@ html,
   @apply text-xs font-bold uppercase text-gray-500 mb-3 transition;
 }
 
-.input-group input {
+.input-group input,
+.input-group textarea {
   @apply border-2 border-gray-bg focus:border-accent focus:outline-none rounded-lg p-3 w-full;
 }
 

@@ -10,7 +10,7 @@ export default class AuthController {
     const password = request.input('password')
 
     await auth.use('web').attempt(email, password)
-    return response.redirect('/')
+    return response.redirect('/todos')
   }
 
   public showRegister = ({ inertia }: HttpContextContract) => inertia.render('auth/register')
@@ -33,7 +33,7 @@ export default class AuthController {
       })
       const user = await User.create(payload)
       await auth.login(user)
-      return response.redirect('/')
+      return response.redirect('/todos')
     } catch (error) {
       session.flash('errors', error.messages)
       return response.redirect('/auth/register')

@@ -1,7 +1,7 @@
 import { Link, useForm, usePage } from '@inertiajs/inertia-react'
 import React from 'react'
 import Layout from '../../components/Layout'
-import { SignInWithGithub, SignInWithGoogle } from '../../components/SocialButton'
+import { SignInWithGoogle } from '../../components/SocialButton'
 import TextInput from '../../components/TextInput'
 import { IPageProps } from '../../lib/types'
 import useTitle from '../../lib/use-title'
@@ -102,10 +102,6 @@ const Register: React.FC = () => {
             </div>
 
             <div className="input-group my-4 text-md text-center font-bold text-gray-500">OR</div>
-
-            <div className="input-group my-4">
-              <SignInWithGithub />
-            </div>
 
             <div className="input-group my-4">
               <SignInWithGoogle />
